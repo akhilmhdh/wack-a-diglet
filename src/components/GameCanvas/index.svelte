@@ -39,7 +39,7 @@
       } else {
         clearTimeout(peep);
       }
-    }, ConstrainedRandom(2000, 600));
+    }, ConstrainedRandom(3000, 1000));
   };
 
   //Resets the gameplay on each start
@@ -48,6 +48,7 @@
     GameCanvas.querySelectorAll(".column").forEach(el => {
       el.className = "column";
     });
+    Score.reset();
     const gameover = setTimeout(() => {
       Gameplay.toggle();
     }, 60000);
